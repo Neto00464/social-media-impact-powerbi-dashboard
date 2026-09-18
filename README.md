@@ -194,5 +194,5 @@ El reporte se encuentra publicado en Power BI Service:
 
 **José Ernesto Gomez Guido**
 
-* 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/ernesto-gomez-590a51173/)
+* 💼 LinkedIn: [Profile](https://www.linkedin.com/in/ernesto-gomez-590a51173/)
 * 📊 Focus: Data Analytics | Power BI | SQL | Business Intelligence
