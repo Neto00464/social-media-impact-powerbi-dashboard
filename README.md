@@ -1,74 +1,205 @@
-# 📊 Impacto de las Redes Sociales en la Vida Estudiantil — Dashboard en Power BI
+# 📊 Impacto de las Redes Sociales en la Vida Estudiantil — Power BI Dashboard
 
-Análisis de un dataset de 4,500 estudiantes (bachillerato a posgrado) explorando cómo el uso de redes sociales se relaciona con la calidad del sueño, el estrés percibido, la salud mental y el rendimiento académico.
+Análisis de un dataset de **4,500 estudiantes** (bachillerato a posgrado) para explorar la relación entre el uso de redes sociales, la calidad del sueño, el estrés percibido, la salud mental y el rendimiento académico.
 
-![Vista general del dashboard](screenshots/overview.png)
+![Vista general del dashboard](screenshots/An%C3%A1lisis%20del%20impacto%20de%20redes%20sociales%20en%20sue%C3%B1o%2C%20estr%C3%A9s%20y%20rendimiento%20acad%C3%A9mico%20Dashboard.PNG)
+
+---
 
 ## 🎯 Objetivo del proyecto
 
-Practicar el flujo completo de un análisis de Business Intelligence: desde la limpieza de datos en Python hasta la construcción de un dashboard interactivo en Power BI, aplicado a un caso real de comportamiento digital y bienestar estudiantil.
+Practicar el flujo completo de un análisis de **Business Intelligence**, desde la limpieza y preparación de datos en Python hasta el modelado, análisis y visualización en Power BI.
+
+El proyecto utiliza datos sobre comportamiento digital y bienestar estudiantil para identificar patrones relacionados con el uso de redes sociales, estrés, sueño y rendimiento académico.
+
+---
 
 ## ❓ Preguntas de investigación
 
-1. ¿Cómo influye el uso nocturno de pantallas y la edad en los patrones de uso y estrés?
-2. ¿Cuál es la relación empírica entre el tiempo diario de pantalla y el promedio académico (GPA)?
-3. ¿Qué distingue a los estudiantes clasificados con impacto "Beneficial" de aquellos con impacto "Negative"?
-4. ¿Cuáles son las plataformas más usadas entre los estudiantes?
+1. ¿Cómo se relacionan la edad, el uso de redes sociales y el estrés percibido?
+2. ¿Cuál es la relación entre el tiempo diario de uso de redes sociales y el GPA?
+3. ¿Qué características distinguen a los estudiantes clasificados con impacto `Beneficial` frente a aquellos con impacto `Negative`?
+4. ¿Cuáles son las plataformas más utilizadas por los estudiantes?
+5. ¿Existe alguna relación entre el uso de redes sociales, la calidad del sueño y la salud mental?
+
+---
 
 ## 🗂️ Fuente de datos
 
-* **Dataset:** [Impact of Social Media on Life](https://www.kaggle.com/datasets/harishyadav0506/impact-of-social-media-on-life) — Kaggle, por Harish Yadav
-* **Licencia:** CC0 (Dominio público)
-* **Tamaño:** 4,500 registros, 16 columnas
+* **Dataset:** [Impact of Social Media on Life](https://www.kaggle.com/datasets/harishyadav0506/impact-of-social-media-on-life)
+* **Fuente:** Kaggle
+* **Autor del dataset:** Harish Yadav
+* **Licencia:** CC0 / Dominio público
+* **Registros:** 4,500
+* **Columnas:** 16
+
+---
 
 ## 🛠️ Herramientas utilizadas
 
-* **Python (pandas)** en Kaggle Notebooks — limpieza de datos: unificación de categorías bilingües (español/inglés), manejo de valores nulos (imputación por mediana en `Perceived_Stress_Score` y `Academic_Performance_GPA`)
-* **Power BI Desktop** — modelado de datos, medidas DAX y construcción del dashboard interactivo
+| Herramienta          | Uso                                  |
+| -------------------- | ------------------------------------ |
+| **Python / pandas**  | Limpieza y preparación de datos      |
+| **Power BI Desktop** | Modelado, DAX y visualización        |
+| **DAX**              | Creación de medidas y KPIs           |
+| **Kaggle Notebooks** | Desarrollo del proceso de limpieza   |
+| **GitHub**           | Control de versiones y documentación |
+
+---
 
 ## 🧹 Proceso de limpieza de datos
 
-* Se unificaron categorías duplicadas por idioma (ej. "Femenino"/"Female" → "Female")
-* Se imputaron 46 valores nulos en `Perceived_Stress_Score` y 85 en `Academic_Performance_GPA` usando la mediana de cada columna
-* Notebook de limpieza disponible en [`notebook.ipynb`](notebook.ipynb)
+Antes de construir el dashboard se realizó un proceso de preparación de los datos utilizando Python y pandas.
 
-## 📊 Contenido del dashboard
+Principales transformaciones:
 
-* **KPIs generales:** GPA promedio (3.43), Estrés promedio (13.51), Total de estudiantes (4,500)
-* **Segmentaciones interactivas:** por Nivel Académico (High School, Undergraduate, Postgraduate) y Género
-* **Top 5 Plataformas Más Usadas:** ranking de estudiantes por red social
-* **Overall Impact vs Estrés y Salud Mental:** comparación de las 3 categorías de impacto
-* **Edad vs Horas de Uso y Estrés:** evolución de estas métricas a través de las edades (15-26 años)
-* **Uso Diario vs GPA:** dispersión con línea de tendencia
-* **Overall Impact vs Calidad de Sueño y GPA:** comparación de bienestar por categoría
-* **Tabla resumen (Matrix):** todas las métricas clave cruzadas por categoría de Overall Impact
+* Unificación de categorías duplicadas por idioma, por ejemplo:
+
+  * `Femenino` → `Female`
+  * `Masculino` → `Male`
+* Tratamiento de valores nulos.
+* Imputación de valores faltantes utilizando la **mediana** de cada variable.
+* Estandarización de categorías para facilitar el análisis en Power BI.
+* Preparación del dataset para el modelado y visualización.
+
+### Valores imputados
+
+* `Perceived_Stress_Score`: **46 valores**
+* `Academic_Performance_GPA`: **85 valores**
+
+El proceso completo de limpieza está documentado en:
+
+📓 [Notebook de Python](notebook.ipynb)
+
+---
+
+## 📊 Dashboard
+
+El dashboard contiene diferentes visualizaciones y segmentaciones para explorar los datos desde múltiples perspectivas.
+
+### KPIs principales
+
+* **GPA promedio:** 3.43
+* **Estrés promedio:** 13.51
+* **Total de estudiantes:** 4,500
+
+### Visualizaciones
+
+* **Top 5 plataformas más utilizadas**
+* **Overall Impact vs. Estrés**
+* **Overall Impact vs. Salud Mental**
+* **Edad vs. Horas de uso**
+* **Edad vs. Estrés**
+* **Uso diario vs. GPA**
+* **Overall Impact vs. Calidad del Sueño**
+* **Overall Impact vs. GPA**
+* **Matriz resumen de métricas**
+* Segmentación por:
+
+  * Nivel académico
+  * Género
+
+---
 
 ## 📈 Hallazgos principales
 
-* **El estrés es el diferenciador más claro entre categorías:** los estudiantes con `Overall_Impact = Negative` reportan un estrés promedio de 31.0, más del doble que los clasificados como `Beneficial` (11.2).
-* **El uso diario está fuertemente ligado al impacto:** el grupo `Negative` usa redes sociales 12.25 horas al día en promedio, casi 3 veces más que el grupo `Beneficial` (4.42 horas).
-* **Existe una correlación negativa entre uso diario y GPA:** la línea de tendencia del gráfico de dispersión confirma que a más horas de pantalla, el rendimiento académico tiende a bajar (GPA promedio: 3.54 en Beneficial vs 2.56 en Negative).
-* **La salud mental sigue el mismo patrón:** índice de salud mental promedio de 84.3 en Beneficial frente a solo 47.1 en Negative.
-* **La distribución no es pareja:** la mayoría de los estudiantes (3,681 de 4,500) caen en la categoría Beneficial, mientras que solo 165 están en Negative — sugiere que el uso problemático es la minoría, no la norma, en este dataset.
-* **Instagram y TikTok dominan** como las plataformas más usadas por los estudiantes, muy por delante de Reddit, que aparece en último lugar del Top 5.
-* **Weekend_Extra_Hours no diferencia bien entre categorías** (1.73–1.80 horas en las tres), lo que sugiere que el tiempo extra de fin de semana no es un factor determinante del impacto general, a diferencia del uso diario entre semana.
+### 1. El estrés presenta una diferencia importante entre categorías de impacto
 
-## 📊 Ver el dashboard interactivo
+Los estudiantes clasificados como `Negative` presentan un estrés promedio de **31.0**, mientras que el grupo `Beneficial` presenta un promedio de **11.2**.
 
-🔗 [Ver reporte en vivo](TU_ENLACE_DE_PUBLISH_TO_WEB_AQUI)
+### 2. El grupo `Negative` presenta mayor tiempo diario de uso
 
-## 📁 Contenido del repositorio
+El promedio de uso diario de redes sociales fue:
+
+| Overall Impact | Horas diarias |
+| -------------- | ------------: |
+| Beneficial     |        4.42 h |
+| Negative       |       12.25 h |
+
+### 3. Uso diario y rendimiento académico
+
+El gráfico de dispersión muestra una **tendencia negativa** entre las horas de uso diario y el GPA.
+
+El GPA promedio observado fue:
+
+| Overall Impact |  GPA |
+| -------------- | ---: |
+| Beneficial     | 3.54 |
+| Negative       | 2.56 |
+
+> Estos resultados describen asociaciones observadas dentro del dataset y no deben interpretarse como evidencia de causalidad.
+
+### 4. Salud mental
+
+El índice promedio de salud mental fue:
+
+| Overall Impact | Salud mental |
+| -------------- | -----------: |
+| Beneficial     |         84.3 |
+| Negative       |         47.1 |
+
+### 5. Distribución del impacto
+
+La distribución de estudiantes fue:
+
+* **Beneficial:** 3,681
+* **Negative:** 165
+* Resto: otras categorías de impacto
+
+Esto muestra que las categorías de impacto no están distribuidas de manera uniforme en el dataset.
+
+### 6. Plataformas más utilizadas
+
+**Instagram** y **TikTok** aparecen entre las plataformas con mayor número de usuarios dentro del dataset, mientras que **Reddit** aparece en el último lugar del Top 5 mostrado en el dashboard.
+
+### 7. Uso adicional durante los fines de semana
+
+`Weekend_Extra_Hours` presenta valores muy similares entre las categorías de impacto, aproximadamente entre **1.73 y 1.80 horas**, por lo que presenta una diferencia menor entre grupos que el uso diario.
+
+---
+
+## 📁 Archivos del proyecto
 
 ```text
-├── dashboard.pbix          # Archivo de Power BI
-├── notebook.ipynb          # Limpieza de datos en Python (Kaggle)
+social-media-impact-powerbi-dashboard/
+│
+├── Social Media Impact.pbix
+├── notebook.ipynb
 ├── README.md
-└── screenshots/            # Capturas de las páginas del dashboard
+│
+└── screenshots/
+    └── Análisis del impacto de redes sociales en sueño, estrés y rendimiento académico Dashboard.PNG
 ```
+
+### 📊 Power BI
+
+[Descargar / ver archivo PBIX](https://github.com/Neto00464/social-media-impact-powerbi-dashboard/blob/main/Social%20Media%20Impact.pbix)
+
+### 📓 Python
+
+[Ver notebook de limpieza](notebook.ipynb)
+
+---
+
+## 📸 Dashboard Preview
+
+![Dashboard](screenshots/An%C3%A1lisis%20del%20impacto%20de%20redes%20sociales%20en%20sue%C3%B1o%2C%20estr%C3%A9s%20y%20rendimiento%20acad%C3%A9mico%20Dashboard.PNG)
+
+---
+
+## 🔗 Power BI Report
+
+El reporte se encuentra publicado en Power BI Service:
+
+[Ver reporte en Power BI](https://app.powerbi.com/groups/me/reports/f03400a4-6d16-4b60-b044-232eb684f2ca/67c777fdd9b59633a35e?experience=power-bi)
+
+> **Nota:** este enlace puede requerir autenticación de Power BI. El reporte público mediante "Publish to web" no está habilitado actualmente para esta cuenta.
+
+---
 
 ## 👤 Autor
 
-**Tu nombre**
+**José Ernesto Gomez Guido**
 
-* LinkedIn: (tu enlace)
-* Portafolio: (tu enlace)
+* 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/ernesto-gomez/)
+* 📊 Focus: Data Analytics | Power BI | SQL | Business Intelligence
