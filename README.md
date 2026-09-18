@@ -172,10 +172,6 @@ social-media-impact-powerbi-dashboard/
 
 [Descargar / ver archivo PBIX](https://github.com/Neto00464/social-media-impact-powerbi-dashboard/blob/main/Social%20Media%20Impact.pbix)
 
-### 📓 Python
-
-[Ver notebook de limpieza](notebook.ipynb)
-
 ---
 
 ## 📸 Dashboard Preview
@@ -198,5 +194,5 @@ El reporte se encuentra publicado en Power BI Service:
 
 **José Ernesto Gomez Guido**
 
-* 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/ernesto-gomez/)
+* 💼 LinkedIn: [LinkedIn](www.linkedin.com/in/ernesto-gomez-590a51173/)
 * 📊 Focus: Data Analytics | Power BI | SQL | Business Intelligence
