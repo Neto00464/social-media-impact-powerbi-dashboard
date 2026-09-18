@@ -67,9 +67,6 @@ Principales transformaciones:
 * `Perceived_Stress_Score`: **46 valores**
 * `Academic_Performance_GPA`: **85 valores**
 
-El proceso completo de limpieza está documentado en:
-
-📓 [Notebook de Python](notebook.ipynb)
 
 ---
 
